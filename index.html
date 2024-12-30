@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="bumblebee">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- BoxIcons -->
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="to-do.png">
+    <title>Todo List</title>
+</head>
+
+<body>
+   
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>Todo List</h1>
+            <div class="input-section">
+                <input id="todo-input" type="text" placeholder="📑 Add your todo here..."
+                    class="input w-full max-w-xs" aria-label="Add a new todo" />
+                <button id="add-button" class="btn btn-add" aria-label="Add Todo">
+                    <i class="bx bx-plus bx-sm"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Delete Buttons -->
+        <div class="todos-filter">
+            <button id="delete-selected" class="btn btn-ghost delete-selected-btn" aria-label="Delete completed tasks">
+                Delete Selected
+            </button>
+            <button id="delete-all" class="btn btn-ghost delete-all-btn" aria-label="Delete all tasks">
+                Delete All
+            </button>
+        </div>
+
+        <ul id="all-todos" class="todos-list">
+
+        </ul>
+
+        <!-- Filters Section -->
+        <div class="filters">
+            <!-- Dropdown Menu for Filters -->
+            <div class="dropdown">
+                <button class="dropbtn" aria-haspopup="true" aria-expanded="false">Filter</button>
+                <div class="dropdown-content">
+                    <a href="#" id="all" aria-label="Show all tasks">All</a>
+                    <a href="#" id="rem" aria-label="Show pending tasks">Pending</a>
+                    <a href="#" id="com" aria-label="Show completed tasks">Completed</a>
+                </div>
+            </div>
+
+            <!-- Task Counts -->
+            <div class="task-stats">
+                <div class="completed-task">
+                    <p>Completed: <span id="c-count">0</span></p>
+                </div>
+                <div class="remaining-task">
+                    <p>Total Tasks: <span id="r-count">0</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
